@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -16,9 +17,9 @@
     }
 
     .container{
-      max-width: 520px;
+      max-width: 560px;
       margin: 0 auto;
-      background: rgba(255,255,255,0.95);
+      background: rgba(255,255,255,0.96);
       border-radius: 18px;
       padding: 22px 18px;
       box-shadow: 0 20px 60px rgba(0,0,0,0.30);
@@ -26,20 +27,21 @@
 
     h1{
       color: #2d5016;
-      font-size: 1.9rem;
+      font-size: 1.95rem;
       text-align: center;
-      padding: 6px 0 14px;
+      padding: 8px 0 14px;
       border-bottom: 3px solid #d97831;
-      margin-bottom: 14px;
-      font-weight: 800;
+      margin-bottom: 10px;
+      font-weight: 900;
+      letter-spacing: .2px;
     }
 
     .subtitle{
       text-align:center;
-      color:#3a5b3f;
-      font-weight:600;
-      margin: 6px 0 14px;
-      font-size: 0.98rem;
+      color:#2f5a35;
+      font-weight:700;
+      margin: 10px 0 14px;
+      font-size: 1rem;
     }
 
     .card{
@@ -53,27 +55,37 @@
       color:#333;
       margin-top: 8px;
       font-size: 1.02rem;
+      line-height: 1.3;
     }
 
     .row strong{
       color:#2d5016;
       display:inline-block;
       min-width: 92px;
+      font-weight: 800;
     }
 
+    /* Botones: aseguramos texto SIEMPRE visible */
     .btn{
       display:block;
       width:100%;
       text-align:center;
       text-decoration:none;
-      color:#fff;
-      font-weight:800;
+      color:#fff !important;
+      font-weight:900;
+      font-size: 1.05rem;
+      line-height: 1.2;
       padding: 12px 14px;
       border-radius: 12px;
       margin-top: 10px;
       transition: transform .08s ease, opacity .2s ease;
       box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+      border: none;
+      outline: none;
+      -webkit-text-size-adjust: 100%;
     }
+
+    .btn span{ display:inline-block; }
 
     .btn:hover{ opacity:.95; }
     .btn:active{ transform: scale(.99); }
@@ -85,6 +97,53 @@
     }
     .fb{ background:#1877f2; }
 
+    .section-title{
+      color:#2d5016;
+      font-weight: 900;
+      font-size: 1.15rem;
+      margin: 14px 0 8px;
+      display:flex;
+      gap:8px;
+      align-items:center;
+    }
+
+    .list{
+      margin-top: 6px;
+      padding-left: 0;
+      list-style: none;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid rgba(0,0,0,.08);
+      background: #fff;
+    }
+
+    .list li{
+      padding: 10px 12px;
+      font-size: 0.98rem;
+      color:#2d2d2d;
+      border-bottom: 1px solid rgba(0,0,0,.06);
+      display:flex;
+      gap:10px;
+      align-items:flex-start;
+      line-height: 1.25;
+    }
+    .list li:last-child{ border-bottom:none; }
+
+    .tick{
+      width: 18px;
+      height: 18px;
+      border-radius: 4px;
+      background: #eaffea;
+      border: 1px solid rgba(0,0,0,.14);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-weight: 900;
+      color:#2d5016;
+      flex: 0 0 auto;
+      margin-top: 1px;
+    }
+
     .note{
       text-align:center;
       color:#5b5b5b;
@@ -94,9 +153,10 @@
     }
 
     @media (max-width: 420px){
-      h1{ font-size: 1.65rem; }
+      h1{ font-size: 1.7rem; }
       .container{ padding: 18px 14px; }
       .row strong{ min-width: 88px; }
+      .btn{ font-size: 1.02rem; }
     }
   </style>
 </head>
@@ -112,25 +172,43 @@
       <div class="row"><strong>Contacto:</strong> Alex Cardona Moreno</div>
       <div class="row"><strong>Celular:</strong> 311 303 1572</div>
 
-      <!-- WhatsApp -->
+      <!-- WhatsApp (funcional) -->
       <a class="btn wa"
-         href="https://wa.me/573113031572?text=Hola%2C%20me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20sobre%20Finca%20La%20Fantas WhatsApp
+         href="https://wa.me/573113031572?text=Hola%2C%20me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20sobre%20Finca%20La%20Fantas%C3%ADarmación por WhatsApp</span>
       </a>
     </div>
 
-    <!-- VIDEO -->
+    <!-- BOTONES PRINCIPALES -->
     <a class="btn video"
-       href="https://www.instagram.com/p/DINU1s-slvGHeKCPpbhy4rupZnagAHxkwhSLyU0/"
-</a>
-
-    <!-- REDES -->
-    <a class="w.instagram.com/alex_fincalafantasia/
-      📷 Instagram @alex_fincalafantasia
+       href="https://CPpbhy4rupZnagAHxkwhSLyU0/
+      <span>▶️ Ver video (Instagram)</span>
     </a>
 
+    <a class="btn ig"
+       href="https://www.instagram.com/alex_fincalafantasia/"
+       target="_blank" rel</a>
+
     <a class="btn fb"
-       href="https://www.facebook.com/share/17m2rs1diM/"
-      lass="note">
+       href="https://iM/
+      <span>📘 Facebook</span>
+    </a>
+
+    <!-- ACTIVIDADES -->
+    <div class="section-title">✨ Actividades y lo que incluye</div>
+    <ul class="list">
+      <li><span class="tick">✓</span> Transporte desde punto de encuentro</li>
+      <li><span class="tick">✓</span> Tarjeta de asistencia médica</li>
+      <li><span class="tick">✓</span> Desayuno, almuerzo y refrigerio</li>
+      <li><span class="tick">✓</span> Tinto, aromática y fruta durante el día</li>
+      <li><span class="tick">✓</span> Caminata sensorial descalza</li>
+      <li><span class="tick">✓</span> Masajes y baño con sal de mar</li>
+      <li><span class="tick">✓</span> Sendero terapéutico – Reflexología podal</li>
+      <li><span class="tick">✓</span> Caminata ecológica a la Fuente de la Eterna Juventud</li>
+      <li><span class="tick">✓</span> Cascadas naturales con hidromasaje</li>
+      <li><span class="tick">✓</span> Bingo recreativo y actividades grupales</li>
+    </ul>
+
+    <div class="note">
       Guarda este enlace y compártelo por WhatsApp o en la bio de Instagram.
     </div>
 
