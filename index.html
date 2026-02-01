@@ -1,27 +1,25 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>Finca La Fantasía</title>
+
   <style>
     :root{
       --bg1:#1f4f2a;
       --bg2:#0f2f18;
       --card:#ffffff;
       --soft:#f5efe6;
-      --soft2:#f2f2f2;
-      --green:#1db954;
-      --red:#b93a2e;
-      --insta:#e1306c;
-      --fb:#1877f2;
-      --web:#2e7d32;
       --text:#163018;
       --muted:#426046;
       --shadow: 0 10px 30px rgba(0,0,0,.18);
       --radius: 16px;
     }
-    *{box-sizing:border-box}
+
+    *{ box-sizing:border-box; }
+
     body{
       margin:0;
       font-family: Arial, Helvetica, sans-serif;
@@ -30,15 +28,10 @@
       min-height:100vh;
       padding: 28px 14px 40px;
     }
-    .wrap{
-      max-width: 420px;
-      margin: 0 auto;
-    }
-    .page{
-      background: rgba(255,255,255,.08);
-      border-radius: 22px;
-      padding: 14px;
-    }
+
+    .wrap{ max-width: 430px; margin: 0 auto; }
+    .page{ background: rgba(255,255,255,.08); border-radius: 22px; padding: 14px; }
+
     .header{
       background: var(--card);
       border-radius: var(--radius);
@@ -48,6 +41,7 @@
       position:relative;
       overflow:hidden;
     }
+
     .header:after{
       content:"";
       position:absolute;
@@ -57,6 +51,7 @@
       background: linear-gradient(90deg, transparent, #d95b4d, transparent);
       opacity:.7;
     }
+
     .brand{
       display:flex;
       align-items:center;
@@ -65,8 +60,9 @@
       font-weight: 800;
       font-size: 20px;
       margin: 4px 0 14px;
+      letter-spacing:.2px;
     }
-    .brand span{letter-spacing:.2px}
+
     .section{
       margin-top: 14px;
       background: var(--card);
@@ -74,6 +70,7 @@
       box-shadow: var(--shadow);
       overflow:hidden;
     }
+
     .sec-head{
       padding: 12px 14px 8px;
       font-weight: 800;
@@ -82,17 +79,9 @@
       gap:10px;
       align-items:center;
     }
-    .sec-body{
-      padding: 0 14px 14px;
-    }
-    .chip{
-      display:inline-block;
-      padding: 8px 10px;
-      background: var(--soft);
-      border-radius: 12px;
-      border:1px solid rgba(0,0,0,.06);
-      margin-top:8px;
-    }
+
+    .sec-body{ padding: 0 14px 14px; }
+
     .info-grid{
       display:grid;
       grid-template-columns: 1fr;
@@ -100,7 +89,9 @@
       font-size: 13px;
       color: var(--muted);
     }
-    .info-grid b{color: #204422}
+
+    .info-grid b{ color:#204422; }
+
     .btn{
       display:flex;
       align-items:center;
@@ -117,41 +108,45 @@
       margin-top: 10px;
       transition: transform .06s ease, opacity .2s ease;
     }
-    .btn:active{transform: scale(.99)}
-    .btn:hover{opacity:.92}
-    .btn-wa{background: #22c55e;}
-    .btn-red{background: #c0392b;}
-    .btn-insta{background: linear-gradient(90deg, #f58529, #dd2a7b, #8134af);}
-    .btn-fb{background: #1877f2;}
-    .btn-web{background: #2e7d32;}
+
+    .btn:active{ transform: scale(.99); }
+    .btn:hover{ opacity:.92; }
+
+    .btn-wa{ background:#22c55e; }
+    .btn-red{ background:#c0392b; }
+    .btn-insta{ background: linear-gradient(90deg, #f58529, #dd2a7b, #8134af); }
+    .btn-fb{ background:#1877f2; }
+    .btn-web{ background:#2e7d32; }
 
     .map-card{
-      background: #244f2a;
+      background:#244f2a;
       color:#eaffea;
       border-radius: 12px;
       padding: 12px;
       margin-top: 8px;
       text-align:center;
     }
-    .map-card .small{font-size:12px; opacity:.95}
+
+    .map-card .small{ font-size:12px; opacity:.95; }
     .map-card a{
       color:#b9ffb9;
-      font-weight:800;
+      font-weight: 800;
       text-decoration:none;
       display:inline-block;
-      margin-top:6px;
+      margin-top: 6px;
     }
 
     .list{
       margin: 8px 0 0;
       padding: 0;
-      list-style:none;
+      list-style: none;
       border-radius: 12px;
       overflow:hidden;
       border: 1px solid rgba(0,0,0,.08);
     }
+
     .list li{
-      background: #fff;
+      background:#fff;
       padding: 10px 10px;
       display:flex;
       gap:10px;
@@ -159,9 +154,11 @@
       font-size: 13px;
       border-bottom: 1px solid rgba(0,0,0,.06);
     }
-    .list li:last-child{border-bottom:none}
+    .list li:last-child{ border-bottom:none; }
+
     .check{
-      width:18px; height:18px;
+      width:18px;
+      height:18px;
       border-radius: 4px;
       background:#eaffea;
       border:1px solid rgba(0,0,0,.15);
@@ -169,7 +166,7 @@
       align-items:center;
       justify-content:center;
       flex:0 0 auto;
-      margin-top:1px;
+      margin-top: 1px;
       font-size: 13px;
     }
 
@@ -179,23 +176,27 @@
       margin: 0 0 10px;
       text-align:center;
     }
+
     .gallery{
       display:grid;
       grid-template-columns: 1fr 1fr;
       gap: 10px;
     }
+
     .gitem{
-      background: #fff;
+      background:#fff;
       border-radius: 12px;
       overflow:hidden;
       border: 1px solid rgba(0,0,0,.08);
     }
+
     .gitem img{
       width:100%;
       height: 120px;
       object-fit: cover;
       display:block;
     }
+
     .gcap{
       font-size: 12px;
       padding: 8px 9px;
@@ -205,7 +206,6 @@
       gap:6px;
       align-items:center;
     }
-    .footer-space{height:10px}
   </style>
 </head>
 
@@ -223,14 +223,14 @@
         <div class="sec-head">📌 Contacto principal</div>
         <div class="sec-body">
           <div class="info-grid">
-            <div><b>Nombre:</b> <span id="nombre">EDITA AQUÍ TU NOMBRE</span></div>
-            <div><b>Celular:</b> <span id="cel">EDITA AQUÍ TU CELULAR</span></div>
+            <div><b>Nombre:</b> Alex Cardona Moreno</div>
+            <div><b>Celular:</b> 311 303 1572</div>
           </div>
 
-          <!-- WhatsApp -->
-          <!-- EDITA AQUÍ: cambia el número (con 57 para Colombia) y el mensaje -->
-          <a class="btn btn-wa" id="btnwa"
-             href="https://wa.me/57TU_NUMERO?text=Hola%20quiero%20informaci%C3%B3n%20de%20Finca%20La%20Fantas%C3% </a>
+          <a class="btn btn-wa"
+             href="https://wa.me/573113031572de%20Finca%20La%20Fantas%C3%ADa
+            💬 Escríbenos por WhatsApp
+          </a>
         </div>
       </div>
 
@@ -238,27 +238,24 @@
       <div class="section">
         <div class="sec-head">🎥 Video (Instagram)</div>
         <div class="sec-body">
-          <!-- EDITA AQUÍ: pega el link del video o reel -->
-          https://instagram.com/tu_link_del_video
+          https://www.instagram.com/p/DINU1s-slvGHeKCPpbhy4rupZnagAHxkwhSLyU0/
             ▶️ Ver video en Instagram
           </a>
         </div>
       </div>
 
-      <!-- Redes -->
+      <!-- Redes sociales y web -->
       <div class="section">
         <div class="sec-head">🌐 Redes sociales y web</div>
         <div class="sec-body">
-          <!-- EDITA AQUÍ: tu usuario de Instagram -->
           <a class="btn btn-insta"
-                      📷 Síguenos en Instagram @tu_instagram
+             href="https://www.instagram.com/alex_fincalafantasia?igsh=MWk5Zm16NGlmd2tzYQ%en Instagram @alex_fincalafantasia
           </a>
 
-          <!-- EDITA AQUÍ: tu link de Facebook -->
           <a class="btn btn-fb"
-             href="https://facebook.com/tu_facebook"
-             target="_blank" rel="!-- EDITA AQUÍ: tu sitio web (si tienes) -->
-          https://tusitio.com
+             href="https://www.facebook.com/share/17m2rs1diM/"
+             target="_
+          https://durley21.github.io/finca-la-fantasia/
             🌿 Sitio web oficial
           </a>
         </div>
@@ -270,10 +267,10 @@
         <div class="sec-body">
           <div class="map-card">
             <div style="font-weight:800;">Barbosa, Antioquia</div>
-            <div class="small">Sector El Carrizal</div>
+            <div class="small">Finca La Fantasía</div>
 
-            <!-- EDITA AQUÍ: pega tu link de Google Maps -->
-            <a href="https://maps.google.com/?q=Barbosa%20Antioquia" target="_blank" relaps →
+            <a href="https://www.google.com/maps/place/Finca+La+Fantas%C3%ADa/@6.4724399,-75.2785786,17z/data=!4m6!3m5!1s0x8e4415081f27c249:0xc75636946d7e8542!8m2!3d6.4724399!4d-75.2760037!16s%2Fg%2F11sg26zszw?entry=ttu"
+              gle Maps →
             </a>
           </div>
         </div>
@@ -284,52 +281,46 @@
         <div class="sec-head">✨ Servicios incluidos</div>
         <div class="sec-body">
           <ul class="list">
-            <!-- EDITA AQUÍ: ajusta la lista como en tu imagen -->
             <li><span class="check">✓</span> Transporte desde punto de encuentro</li>
             <li><span class="check">✓</span> Tarjeta de asistencia médica</li>
             <li><span class="check">✓</span> Desayuno, almuerzo y refrigerio</li>
             <li><span class="check">✓</span> Tinto, aromática y fruta durante el día</li>
-            <li><span class="check">✓</span> Caminata ecológica / senderismo</li>
-            <li><span class="check">✓</span> Masajes y baño con sal (si aplica)</li>
-            <li><span class="check">✓</span> Cascadas naturales con hidratación</li>
+            <li><span class="check">✓</span> Caminatas, masajes y cascadas 💦</li>
             <li><span class="check">✓</span> Bingo recreativo y actividades grupales</li>
           </ul>
         </div>
       </div>
 
-      <!-- Galería -->
+      <!-- Galería de fotos (TUS FOTOS) -->
       <div class="section">
         <div class="sec-head">🖼️ Galería de fotos</div>
         <div class="sec-body">
           <p class="gallery-title">Conoce nuestras instalaciones</p>
 
           <!-- IMPORTANTE:
-               Para que sea igual a tu imagen, luego subimos tus fotos al repo en una carpeta /img
-               y aquí reemplazamos los src por img/tu-foto.jpg
+               Estas rutas funcionan SOLO si subiste tus fotos a: img/foto1.jpg ... img/foto4.jpg
           -->
           <div class="gallery">
             <div class="gitem">
-              <img src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29at&fit=crop&w=800&q=60
+              <mg/foto1.jpg
               <div class="gcap">💦 Cascadas naturales</div>
             </div>
             <div class="gitem">
-              <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q        <div class="gcap">🏊 Piscina</div>
+              <img src="img/foto2         <div class="gcap">🏡 Instalaciones</div>
             </div>
             <div class="gitem">
-              <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3rmat&fit=crop&w=800&q=60
-              <div class="gcap">🌿 Naturaleza</div>
+              img/foto3.jpg
+              <div class="gcap">🏊 Piscina</div>
             </div>
             <div class="gitem">
-              <img src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=800&q=60" alt="Av class="gcap">🥾 Aventura</div>
+              img/foto4.jpg
+              <div class="gcap">🚗 Entrada</div>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="footer-space"></div>
-
     </div>
   </div>
 </body>
 </html>
-
