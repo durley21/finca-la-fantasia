@@ -1,55 +1,183 @@
-<div class="container">
-  <h1>🌿 Finca La Fantasía 🌿</h1>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Finca La Fantasía – Enlaces, contacto, ubicación, servicios y galería." />
+  <title>Finca La Fantasía - Enlaces y Contacto</title>
 
-  <div class="contact-section">
-    <h2>📞 Contacto principal</h2>
-    <div class="contact-item"><strong>Nombre:</strong> Alex Mauricio Cardona Moreno</div>
-    <div class="contact-item">
-      <strong>Celular:</strong>
-      <a href="tel:+573113031572" style="color:#d978/a>
-    </div>
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{
+      font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
+      background: linear-gradient(135deg,#2d5016 0%, #4a7c2c 100%);
+      color:#111;
+      padding:2rem;
+      min-height:100vh;
+    }
+    .container{
+      max-width:860px;
+      margin:0 auto;
+      background: rgba(255,255,255,.96);
+      border-radius:20px;
+      padding:3rem;
+      box-shadow:0 20px 60px rgba(0,0,0,.30);
+    }
+    header{ text-align:center; margin-bottom:1.25rem; }
+    h1{
+      color:#2d5016;
+      font-size:2.6rem;
+      border-bottom:3px solid #d97831;
+      padding-bottom:1rem;
+      display:inline-block;
+    }
+    .subtitle{ margin-top:.75rem; color:#4a7c2c; font-weight:600; }
+    section{ margin-top:1.75rem; }
+    h2{
+      color:#4a7c2c;
+      font-size:1.75rem;
+      margin-bottom:1rem;
+      display:flex;
+      align-items:center;
+      gap:.5rem;
+    }
+    .card{ background:#f5efe6; border-radius:15px; padding:1.25rem; margin:1rem 0; }
+    .contact-item{ margin:.65rem 0; font-size:1.05rem; color:#333; line-height:1.45; }
+    .contact-item strong{ color:#2d5016; display:inline-block; min-width:150px; }
+    a{ color:inherit; }
+    .tel{ color:#d97831; text-decoration:none; font-weight:700; }
+    .tel:hover{ text-decoration:underline; }
+    .btn{
+      display:block; width:100%; text-decoration:none; color:#fff;
+      padding:1rem 1.25rem; border-radius:12px; margin:.9rem 0;
+      text-align:center; font-weight:700; font-size:1.08rem;
+      transition: transform .2s ease, box-shadow .2s ease, filter .2s ease;
+      box-shadow:0 6px 18px rgba(0,0,0,.14);
+    }
+    .btn:hover{ transform: translateY(-2px); filter:brightness(.98); box-shadow:0 10px 26px rgba(0,0,0,.18); }
+    .btn:active{ transform: translateY(0px); }
+    .whatsapp{ background:#25D366; }
+    .video{ background:#c4312b; }
+    .instagram{ background:linear-gradient(45deg,#f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); }
+    .facebook{ background:#1877f2; }
+    .website{ background:#4a7c2c; }
+    .location{ background:#2d5016; color:#fff; border-radius:15px; padding:1.25rem; text-align:center; }
+    .location p{ margin:.75rem 0; font-size:1.15rem; }
+    .location a{ color:#ffd700; text-decoration:none; font-weight:800; }
+    .location a:hover{ text-decoration:underline; }
+    .services{ background:#fdfbf7; border-radius:15px; padding:1.25rem; }
+    ul{ list-style:none; padding-left:0; }
+    li{ color:#333; padding:.55rem 0; font-size:1.03rem; border-bottom:1px solid #e0e0e0; }
+    li:last-child{ border-bottom:none; }
+    li::before{ content:"✓"; color:#4a7c2c; font-weight:900; margin-right:.55rem; }
+    .gallery{ background:#fdfbf7; border-radius:15px; padding:1.25rem; }
+    .gallery p{ text-align:center; color:#666; margin-bottom:1rem; }
+    .grid{ display:grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap:1rem; }
+    .g-item{
+      border-radius:14px; overflow:hidden; background:#fff;
+      box-shadow:0 6px 18px rgba(0,0,0,.12);
+      position:relative;
+    }
+    .g-item img{ width:100%; height:220px; object-fit:cover; display:block; }
+    .g-cap{
+      position:absolute; left:0; right:0; bottom:0;
+      padding:10px 12px;
+      background: linear-gradient(to top, rgba(45,80,22,.90), rgba(45,80,22,0));
+      color:#fff; font-weight:800; font-size:1rem;
+    }
+    footer{ text-align:center; color:#666; margin-top:2rem; padding-top:1rem; border-top:2px solid #e0e0e0; font-style:italic; }
+    @media (max-width: 600px){
+      body{ padding:1rem; }
+      .container{ padding:1.35rem; }
+      h1{ font-size:2.0rem; }
+      h2{ font-size:1.45rem; }
+      .contact-item strong{ min-width:120px; }
+      .g-item img{ height:200px; }
+    }
+  </style>
+</head>
 
-    <a href="https://wa.me/573113031572?text=Hola,%20me%20interesa%20conocer%20más%20sobre%20Finca%20La%20Fantasía Escríbenos por WhatsApp
-    </a>
-  </div>
+<body>
+  <main class="container">
+    <header>
+      <h1>🌿 Finca La Fantasía 🌿</h1>
+      <div class="subtitle">Enlaces, contacto y servicios en un solo lugar</div>
+    </header>
 
-  <div class="contact-section">
-    <h2>🎥 Video (Instagram)</h2>
-    <a href="https://www.instagram.com/p/DINU1s-slvGHeKCPpbhy4rupZnagU0/
-      ▶️ Ver video en Instagram
-    </a>
-  </div>
+    <!-- ✅ CONTACTO (con número + botón WhatsApp) -->
+    <section aria-labelledby="contacto">
+      <h2 id="contacto">📞 Contacto principal</h2>
+      <div class="card">
+        <div class="contact-item"><strong>Nombre:</strong> Alex Mauricio Cardona Moreno</div>
+        <div class="contact-item"><strong>Celular:</strong>
+          <a class="tel1572311 303 1572</a>
+        </div>
+        <a class="btn whatsapp"
+           href="https://wa.me/573113031572?text=Hola,%20me%20interesa%20conocer%20más%20sobre%20Finca%20La%20Fantasía"
+           target="_blank" rel="ia-labelledby="video">
+      <h2 id="video">🎥 Video (Instagram)</h2>
+      <div class="card">
+        <a class="btn video"
+           href="https://www.instagram.com/p/DINU1s-slvGHeKCPpbhy4rupZnagAHxkwhSLyU0/"
+           target="_blank" reln aria-labelledby="redes">
+      <h2 id="redes">🌐 Redes sociales y web</h2>
+      <div class="card">
+        <a class="btn instagram"
+           href="https://www.instagram.com/alex_fincalafcalafantasia</a>
 
-  <div class="contact-section">
-    <h2>🌐 Redes sociales y web</h2>
+        <a class="btn facebook"
+           href="https://www.facebook.com/share/1A8TZfyFZk/"
+          class="btn website"
+           href="https://www.cenabventadepropiedadraiz.com/"
+           target="_blank"ection aria-labelledby="ubicacion">
+      <div class="location">
+        <h2 id="ubicacion" style="color:#fff; margin-top:0;">📍 Ubicación</h2>
+        <p><strong>Barbosa, Antioquia</strong><br>Sector El Carretero</p>
+        <a href="https://maps.google.com/?q=Finca+La+Fantasia+Barbosa+Antioquia+El+Carretero"
+           target="_</div>
+    </section>
 
-    <a href="https://www.instagram.com/alex_fincalafantasia/"
-       class="linkcalafantasia
-    </a>
+    <section aria-labelledby="servicios">
+      <h2 id="servicios">✨ Servicios incluidos</h2>
+      <div class="services">
+        <ul>
+          <li>🚌 Transporte desde punto de encuentro</li>
+          <li>🩺 Tarjeta de asistencia médica</li>
+          <li>🍽️ Desayuno, almuerzo y refrigerio</li>
+          <li>☕ Tinto, aromática y fruta durante el día</li>
+          <li>🦶 Caminata sensorial descalza</li>
+          <li>🛀 Masajes y baño con sal de mar</li>
+          <li>👣 Sendero terapéutico – Reflexología podal</li>
+          <li>🌿 Caminata ecológica a la Fuente de la Eterna Juventud</li>
+          <li>💦 Cascadas naturales con hidromasaje</li>
+          <li>🎉 Bingo recreativo y actividades grupales</li>
+        </ul>
+      </div>
+    </section>
 
-    <a href="https://www.facebook.com/share/1A8TZfyFZk/"
-       class="link-button facebook" target="_blank" rel="noopeneraiz.com/"
-      eb oficial (CENAB)
-    </a>
-  </div>
+    <!-- ✅ GALERÍA (rápida): usa URLs; si quieres, luego te ayudo a subir fotos -->
+    <section aria-labelledby="galeria">
+      <h2 id="galeria">📸 Galería de fotos</h2>
+      <div class="gallery">
+        <p>Conoce nuestras instalaciones</p>
+        <div class="grid">
+          <div class="g-item">
+            <img src="https://via.placeholder.com/1200x800?text=Finca+La+Fantas%C3%ADa+1" alt="Finca La Fantasía - Foto 1es</div>
+          </div>
+          <div class="g-item">
+            <img src="https://via.placeholder.com/1200x800?text=Finca+La+Fantas%C3%ADa+2" alt="Finca Lag-cap">Zonas naturales</div>
+          </div>
+          <div class="g-item">
+            <img src="https://via.placeholder.com/1200x800?text=Finca+La+Fantas%C3%ADa+3" alt="Finca La Fantasía - Foto/div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <div class="services-list">
-    <h2>✨ Servicios incluidos</h2>
-    <ul>
-      <li>🚌 Transporte desde punto de encuentro</li>
-      <li>🩺 Tarjeta de asistencia médica</li>
-      <li>🍽️ Desayuno, almuerzo y refrigerio</li>
-      <li>☕ Tinto, aromática y fruta durante el día</li>
-      <li>🦶 Caminata sensorial descalza</li>
-      <li>💆 Masajes y baño con sal de mar</li>
-      <li>👣 Sendero terapéutico – Reflexología podal</li>
-      <li>🌿 Caminata ecológica a la Fuente de la Eterna Juventud</li>
-      <li>💦 Cascadas naturales con hidromasaje</li>
-      <li>🎉 Bingo recreativo y actividades grupales</li>
-    </ul>
-  </div>
+    <footer>
+      “Respira, desconéctate y renueva tu energía en la naturaleza”
+    </footer>
+  </main>
+</body>
+</html>
 
-  <p class="caption-text">
-    Guarda este enlace y compártelo por WhatsApp o en la bio de Instagram.
-  </p>
-</div>
